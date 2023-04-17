@@ -74,8 +74,8 @@ p {
 a{
   font-size: 1.3rem;
   text-decoration: none;
-  background-color: var(--light);
-  color: var(--main);
+  background-color: var(--main);
+  color: var(--light);
   margin: 1rem;
   padding: 1rem;
   border: 2px solid var(--dark);
@@ -86,51 +86,67 @@ a{
 a:hover {
   transform: scale(1.05);
   background-color: var(--dark);
+  color: var(--main);
+}
+
+img{
+  max-width: 100%;
 }
 
 /* ! +++++ HEADER +++++ */
 
 header{
+  position: fixed;
+  top: 1vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  position: sticky;
-  top: 1rem;
-  height: 10vh;
-  width: 95vw;
-  margin: 1vh auto;
-  border-radius: 10px;
-  border: 2px solid var(--dark);
-  background: linear-gradient(
-    135deg,
-    rgba(16, 68, 25, 0.7),
-    rgba(16, 68, 25, 0.7)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 2px 2px 5px rgb(60, 60, 60);
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 10vw;
+  height: 100vh;
+}
+
+header .logo img{
+  display: block;
+  margin: 0 auto 2rem auto;
+  max-width: 80%;
+
 }
 
 header h1 {
-  color: var(--light);
+  color: var(--main);
   text-align: center;
 }
 
-header .links {
+header .links{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .links a{
+  text-align: center;
+  width: 90%;
 }
 
 /* ! +++++ MAIN +++++ */
 
+main{
+  max-width: 90vw;
+  margin-left: 10vw;
+}
+
 /* +++++ WRAPPER +++++ */
 
 .wrapper{
-    width: 100vw;
-    height: 95vh;
-    padding-top: 12vh;
-    margin-bottom: 5rem;
+  margin: 5rem auto;
+  padding-top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 95vh;
 }
 
 /* +++++ CARD +++++ */
@@ -141,8 +157,8 @@ header .links {
   justify-content: space-evenly;
   flex-direction: column;
   padding: 2rem;
-  width: 80%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: var(--main);
   border: 2px solid var(--dark);
   border-radius: 10px;
