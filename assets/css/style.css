@@ -165,6 +165,14 @@ main{
   box-shadow: 2px 2px 5px rgb(60, 60, 60);
 }
 
+.card h2{
+  font-size: 4.5rem;
+}
+
+.card p{
+  font-size: 2rem;
+}
+
 .card h2,p {
   margin: 0 auto 1rem auto;
   text-align: center;
