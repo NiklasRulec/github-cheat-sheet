@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Github Cheat Sheet</h1>
+      <div class="links">
+        <a href="#install">INSTALL</a>
+        <a href="#setup">SETUP</a>
+        <a href="#init">SETUP & INIT</a>
+        <a href="#stage">STAGE & SNAPSHOT</a>
+        <a href="#branch">BRANCH & MERGE</a>
+        <a href="#inspect">INSPECT & COMPARE</a>
+        <a href="#share">SHARE & UPDATE</a>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper" id="install">
+        <section class="card">
+          <article class="card-header">
+            <h2>INSTALLATION & GUIS</h2>
+            <p>
+              With platform specific installers for Git, GitHub also provides
+              the ease of staying up-to-date with the latest releases of the
+              command line tool while providing a graphical user interface for
+              day-to-day interaction, review, and repository synchronization.
+            </p>
+          </article>
+          <div class="card-links">
+            <a href="https://windows.github.com">GitHub for Windows</a>
+            <a href="https://mac.github.com">GitHub for Mac</a>
+            <a href="https://git-scm.com">Git for All Platforms</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="wrapper" id="setup">
+        <section class="card">
+          <article class="card-header">
+            <h2>SETUP</h2>
+            <p>
+              Configuring user information used across all local repositories
+            </p>
+          </article>
+          <article class="card-content">
+            <article class="code">
+              <h3>git config --global user.name “[firstname lastname]”</h3>
+              <h3>
+                set a name that is identifiable for credit when review version
+                history
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git config --global user.email “[valid-email]”</h3>
+              <h3>
+                set an email address that will be associated with each history
+                marker
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git config --global color.ui auto</h3>
+              <h3>
+                set automatic command line coloring for Git for easy reviewing
+              </h3>
+            </article>
+          </article>
+        </section>
+      </div>
+
+      <div class="wrapper" id="init">
+        <section class="card">
+          <article class="card-header">
+            <h2>SETUP & INIT</h2>
+            <p>
+              Configuring user information, initializing and cloning
+              repositories
+            </p>
+          </article>
+          <article class="card-content">
+            <article class="code">
+              <h3>git init</h3>
+              <h3>initialize an existing directory as a Git repository</h3>
+            </article>
+            <article class="code">
+              <h3>git clone [url]</h3>
+              <h3>
+                retrieve an entire repository from a hosted location via URL
+              </h3>
+            </article>
+          </article>
+        </section>
+      </div>
+
+      <div class="wrapper" id="stage">
+        <section class="card">
+          <article class="card-header">
+            <h2>STAGE & SNAPSHOT</h2>
+            <p>Working with snapshots and the Git staging area</p>
+          </article>
+          <article class="card-content">
+            <article class="code">
+              <h3>git status</h3>
+              <h3>
+                show modified files in working directory, staged for your next
+                commit
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git add [file]</h3>
+              <h3>add a file as it looks now to your next commit (stage)</h3>
+            </article>
+            <article class="code">
+              <h3>git reset [file]</h3>
+              <h3>
+                unstage a file while retaining the changes in working directory
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git diff</h3>
+              <h3>diff of what is changed but not staged</h3>
+            </article>
+            <article class="code">
+              <h3>git diff --staged</h3>
+              <h3>diff of what is staged but not yet commited</h3>
+            </article>
+            <article class="code">
+              <h3>git commit -m “[descriptive message]”</h3>
+              <h3>commit your staged content as a new commit snapshot</h3>
+            </article>
+          </article>
+        </section>
+      </div>
+
+      <div class="wrapper" id="branch">
+        <section class="card" id="branch">
+          <article class="card-header">
+            <h2>BRANCH & MERGE</h2>
+            <p>
+              Isolating work in branches, changing context, and integrating
+              changes
+            </p>
+          </article>
+          <article class="card-content">
+            <article class="code">
+              <h3>git branch</h3>
+              <h3>
+                list your branches. a * will appear next to the currently active
+                branch
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git branch [branch-name]</h3>
+              <h3>create a new branch at the current commit</h3>
+            </article>
+            <article class="code">
+              <h3>git checkout</h3>
+              <h3>
+                switch to another branch and check it out into your working
+                directory
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git merge [branch]</h3>
+              <h3>merge the specified branch’s history into the current one</h3>
+            </article>
+            <article class="code">
+              <h3>git log</h3>
+              <h3>show all commits in the current branch’s history</h3>
+            </article>
+          </article>
+        </section>
+      </div>
+
+      <div class="wrapper" id="inspect">
+        <section class="card">
+          <article class="card-header">
+            <h2>INSPECT & COMPARE</h2>
+            <p>Examining logs, diffs and object information</p>
+          </article>
+          <article class="card-content">
+            <article class="code">
+              <h3>git log</h3>
+              <h3>show the commit history for the currently active branch</h3>
+            </article>
+            <article class="code">
+              <h3>git log branchB..branchA</h3>
+              <h3>show the commits on branchA that are not on branchB</h3>
+            </article>
+            <article class="code">
+              <h3>git log --follow [file]</h3>
+              <h3>show the commits that changed file, even across renames</h3>
+            </article>
+            <article class="code">
+              <h3>git diff branchB...branchA</h3>
+              <h3>
+                show the diff of what is in branchA that is not in branchB
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git show [SHA]</h3>
+              <h3>show any object in Git in human-readable format</h3>
+            </article>
+          </article>
+        </section>
+      </div>
+
+      <div class="wrapper" id="share">
+        <section class="card">
+          <article class="card-header">
+            <h2>SHARE & UPDATE</h2>
+            <p>Retrieving updates from another repository and updating local repos</p>
+          </article>
+          <article class="card-content">
+            <article class="code">
+              <h3>git remote add [alias] [url]</h3>
+              <h3>add a git URL as an alias</h3>
+            </article>
+            <article class="code">
+              <h3>git fetch [alias]</h3>
+              <h3>fetch down all the branches from that Git remote</h3>
+            </article>
+            <article class="code">
+              <h3>git merge [alias]/[branch]</h3>
+              <h3>merge a remote branch into your current branch to bring it up to date</h3>
+            </article>
+            <article class="code">
+              <h3>git push [alias] [branch]</h3>
+              <h3>
+                Transmit local branch commits to the remote repository branch
+              </h3>
+            </article>
+            <article class="code">
+              <h3>git pull</h3>
+              <h3>fetch and merge any commits from the tracking remote branch</h3>
+            </article>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+/* ! +++++ BASIC +++++ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #687351;
+  --second: #9ba17f;
+  --light: #e8e4db;
+  --dark: #c9c1ae;
+  --white: white;
+  --black: black;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Regular";
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(../font/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Light";
+  src: url(../font/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url(../font/Poppins-Bold.ttf);
+}
+
+h1 {
+  font-size: 3.3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4{
+    font-size: 1.8rem;
+}
+
+h5{
+    font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* ? +++++ BUTTON +++++ */
+
+a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: var(--light);
+  color: var(--main);
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.05);
+  background-color: var(--dark);
+}
+
+/* ! +++++ HEADER +++++ */
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 1rem;
+  height: 10vh;
+  width: 90vw;
+  margin: 1vh auto;
+  border-radius: 10px;
+  border: 2px solid var(--dark);
+  background: linear-gradient(
+    135deg,
+    rgba(16, 68, 25, 0.6),
+    rgba(16, 68, 25, 0.6)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 5px rgb(60, 60, 60);
+}
+
+header h1 {
+  color: var(--light);
+  text-align: center;
+}
+
+header .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ! +++++ MAIN +++++ */
+
+/* +++++ WRAPPER +++++ */
+
+.wrapper{
+    width: 100vw;
+    height: 90vh;
+    padding-top: 12vh;
+    margin-bottom: 5rem;
+}
+
+/* +++++ CARD +++++ */
+
+.card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 2rem;
+  width: 80%;
+  height: 100%;
+  background-color: var(--main);
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgb(60, 60, 60);
+}
+
+.card h2,p {
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  color: var(--light);
+  max-width: 70%;
+}
+
+.card .card-links {
+  margin: 0 auto;
+}
+
+/* +++++ CODE +++++ */
+
+.code {
+  margin: 0 auto 1rem auto;
+  background: #000;
+  color: #ccc;
+  border: 3px groove #ccc;
+  padding: 1rem;
+  width: 80%;
+}
+
+.code h3:nth-child(2){
+    color: red;
+    font-size: 1.5rem;
+}
+
+/* ! +++++ FOOTER +++++ */
